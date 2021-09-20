@@ -47,11 +47,6 @@ public class Autor extends Base{
             CascadeType.PERSIST,
             CascadeType.MERGE
     })
-	@JoinTable(
-            name = "student_course",
-            joinColumns = {@JoinColumn(name = "autor_id")},
-            inverseJoinColumns = {@JoinColumn(name = "libro_id")}
-    )
     private Set<Libro> libros;
 	
 	
