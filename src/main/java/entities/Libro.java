@@ -50,10 +50,7 @@ public class Libro extends Base{
 	@JoinColumn(name = "fk_persona")
 	private Persona persona;
 	
-	/*
-	@ManyToMany(mappedBy="libros")
-	private Set<Autor>autores;
-	*/
+
 	
 	@ManyToMany(cascade = CascadeType.REFRESH)
 	private List<Autor> autores = new ArrayList<Autor>();
